@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.core.text.isDigitsOnly
 
 class MainActivity : AppCompatActivity() {
+    val diceImage : ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,7 +23,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice(){
-        val resultImageView : ImageView = findViewById(R.id.dice_image)
+        var resultImageView : ImageView? = diceImage
+        if(resultImageView == null){
+            resultImageView = findViewById(R.id.dice_image)
+        }
         val drawableResource = when((1..6).random()){
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
@@ -32,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
         }
 
-        resultImageView.setImageResource(drawableResource)
+        resultImageView!!.setImageResource(drawableResource)
     }
 
 //    private fun countUp(){
