@@ -1,17 +1,17 @@
 package com.example.myfirstandriod
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.text.isDigitsOnly
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val rollButton : Button = findViewById<Button>(R.id.roll_button)
+        val rollButton : Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener{rollDice()}
         val countUpButton : Button = findViewById(R.id.count_up)
         countUpButton.setOnClickListener{countUp()}
@@ -21,9 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice(){
-//        Toast.makeText(this, "button clicked",
-//            Toast.LENGTH_SHORT).show()
-        val resultText : TextView = findViewById<TextView>(R.id.display_text)
+        val resultText : TextView = findViewById(R.id.display_text)
         val randomFace = (1..6).random()
         resultText.text = randomFace.toString()
     }
@@ -43,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         resultText.text = finalText
     }
 
+    @SuppressLint("SetTextI18n")
     private fun resetValue(){
         val resultText : TextView = findViewById(R.id.display_text)
         resultText.text = "Hello World!"
