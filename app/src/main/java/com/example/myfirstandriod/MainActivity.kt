@@ -16,10 +16,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton : Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener{rollDice()}
-//        val countUpButton : Button = findViewById(R.id.count_up)
-//        countUpButton.setOnClickListener{countUp()}
-//        val resetButton : Button = findViewById(R.id.reset_button)
-//        resetButton.setOnClickListener{resetValue()}
+        val resetButton : Button = findViewById(R.id.reset_button)
+        resetButton.setOnClickListener{resetValue()}
 
         // lateinit
         diceImage = findViewById(R.id.dice_image)
@@ -42,24 +40,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    private fun countUp(){
-//        val resultText : TextView = findViewById(R.id.display_text)
-//        val text = resultText.text.toString()
-//        val finalText : String = if(text.isDigitsOnly()){
-//            var value = text.toInt()
-//            if(value < 6)
-//                value++
-//            value.toString()
-//        }else{
-//            "1"
-//        }
-//
-//        resultText.text = finalText
-//    }
-//
-//    @SuppressLint("SetTextI18n")
-//    private fun resetValue(){
-//        val resultText : TextView = findViewById(R.id.display_text)
-//        resultText.text = "Hello World!"
-//    }
+    private fun resetValue(){
+        diceImage.setImageResource(R.drawable.empty_dice)
+        diceImage1.setImageResource(R.drawable.empty_dice)
+    }
 }
