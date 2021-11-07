@@ -20,11 +20,11 @@ class MainActivity : AppCompatActivity() {
 //        val resetButton : Button = findViewById(R.id.reset_button)
 //        resetButton.setOnClickListener{resetValue()}
 
+        // lateinit
+        diceImage = findViewById(R.id.dice_image)
     }
 
     private fun rollDice(){
-        diceImage = findViewById(R.id.dice_image)
-
         val drawableResource = when((1..6).random()){
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
