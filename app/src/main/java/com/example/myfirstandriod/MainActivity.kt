@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 //        Toast.makeText(this, "button clicked",
 //            Toast.LENGTH_SHORT).show()
         val resultText : TextView = findViewById<TextView>(R.id.display_text)
-        resultText.text = "DiceRolled"
+        val randomFace = (1..6).random()
+        resultText.text = randomFace.toString()
     }
 }
