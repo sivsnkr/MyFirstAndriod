@@ -2,4 +2,5 @@
     <string name="app_name">About Me</string>
     <string name="name">Shiv Shankar</string>
     <string name="yellow_star">Yellow Star</string>
+    <string name="my_bio">Hello, My Name is Shiv Shankar. I am a computer science student from IIITDM Kancheepuram.\n I am interested in Data Structure, Algorithms, DevOps and little bit of Machine Learning. Currently i\'m interning with KLA as Software Engineer and i\'m work on adding observability to the distributed system.</string>
 </resources>
