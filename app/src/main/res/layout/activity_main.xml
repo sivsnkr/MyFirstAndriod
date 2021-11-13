@@ -17,11 +17,22 @@
 
     <EditText
         android:id="@+id/nickname_edit"
+        style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/hint_nickname"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:minHeight="48dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/done_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/done" />
 
     <ImageView
         android:id="@+id/star_image"
