@@ -38,5 +38,8 @@ class MainActivity : AppCompatActivity() {
         editText.visibility = View.VISIBLE
         doneButton.visibility = View.VISIBLE
         view.visibility = View.GONE
+        editText.requestFocus()
+        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.showSoftInput(editText, 0)
     }
 }
