@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyFirstAndriod</string>
+    <string name="box_one">Box one</string>
 </resources>
