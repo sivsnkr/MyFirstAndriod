@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.myName = MyName("Shiv Shankar")
 
         binding.doneButton.setOnClickListener {
             addNickName(it)
@@ -29,8 +30,8 @@ class MainActivity : AppCompatActivity() {
     private fun addNickName(view : View){
         val editText : EditText = binding.nicknameEdit
         val nicknameTextview : TextView = binding.nicknameText
+        binding.myName?.nickName = editText.text.toString()
         nicknameTextview.apply{
-            text = editText.text
             visibility = View.VISIBLE
         }
         editText.visibility = View.GONE
