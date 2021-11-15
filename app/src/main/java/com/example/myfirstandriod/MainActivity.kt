@@ -29,10 +29,12 @@ class MainActivity : AppCompatActivity() {
     private fun addNickName(view : View){
         val editText : EditText = binding.nicknameEdit
         val nicknameTextview : TextView = binding.nicknameText
-        nicknameTextview.text = editText.text
+        nicknameTextview.apply{
+            text = editText.text
+            visibility = View.VISIBLE
+        }
         editText.visibility = View.GONE
         view.visibility = View.GONE
-        nicknameTextview.visibility = View.VISIBLE
         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
@@ -40,10 +42,12 @@ class MainActivity : AppCompatActivity() {
     private fun updateNickname(view : View){
         val editText : EditText = binding.nicknameEdit
         val doneButton : Button = binding.doneButton
-        editText.visibility = View.VISIBLE
+        editText.apply{
+            visibility = View.VISIBLE
+            requestFocus()
+        }
         doneButton.visibility = View.VISIBLE
         view.visibility = View.GONE
-        editText.requestFocus()
         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.showSoftInput(editText, 0)
     }
