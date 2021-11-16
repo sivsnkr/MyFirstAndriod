@@ -16,13 +16,13 @@ class TitleFragment : Fragment() {
     ): View {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater, R.layout.fragment_title, container, false)
         binding.playButton.setOnClickListener{view : View ->
-            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+            view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
         }
         binding.aboutHomeButton.setOnClickListener{view : View ->
-            view.findNavController().navigate(R.id.action_titleFragment_to_aboutFragment)
+            view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToAboutFragment())
         }
         binding.rulesHomeButton.setOnClickListener{view : View ->
-            view.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)
+            view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToRulesFragment())
         }
         setHasOptionsMenu(true)
         return binding.root
