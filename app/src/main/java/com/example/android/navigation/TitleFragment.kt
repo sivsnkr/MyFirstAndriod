@@ -24,6 +24,7 @@ class TitleFragment : Fragment() {
         binding.rulesHomeButton.setOnClickListener{view : View ->
             view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToRulesFragment())
         }
+        setHasOptionsMenu(true)
         return binding.root
     }
 
